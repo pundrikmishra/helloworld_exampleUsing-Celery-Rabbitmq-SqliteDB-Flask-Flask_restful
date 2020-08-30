@@ -35,12 +35,13 @@
  backend='amqp'
 
 If you face error like:-
-           1)  if you star celery worker and face this error
-                    Error:
-                    Unable to load celery application.
-                    'flask' object has no attribute 'user_options'
+           1) if you start celery worker using command:-    celery -A yourfilename.celery worker --loglevel=info
+              and face this error:-
+                            Error:
+                            Unable to load celery application.
+                            'flask' object has no attribute 'user_options'
 
-              Then check your file name, backend url, and most import check you written command like this in your app or not:- celery = make_celery(app)
+              Then check your file name, backend url, yourfilename = name of that file in which your celery app is running,
 
 
 For more:-
